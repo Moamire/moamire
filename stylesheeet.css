@@ -1,0 +1,124 @@
+body{
+  background:#333;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+   
+}
+
+ul{
+    display: flex;
+    margin: 0px 500px ;
+    justify-content: space-around;
+    margin-top:30px;
+}
+li{
+    margin: 0px 17px;
+    display: inline-block;
+}
+.mimi{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+     .mimi:hover{
+        color:rgb(255, 53, 53);
+        font-size: large;
+     }
+.h-1{
+    color: rgb(255, 255, 255);
+    margin-left: 20PX;
+}
+.h-2{
+    font-size: 40px;
+}
+.card-text{
+    margin-top: 230px;
+    
+}
+.body-card{
+    background-color: #333;
+    margin:30px 19px;
+    padding:70px;
+   height:100%;
+   border-radius:20px;
+   
+
+}
+.vid{
+  position: absolute;
+   height:600px;
+   top: 120px;
+   right:150px;
+   border-radius:20px;
+   
+}
+img{
+    position:absolute;
+    border-radius: 50%;
+    margin-top:-80px;
+    margin-left: -30px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+    img:hover{
+    margin-top:-90px;
+        
+    }
+button{
+    background-color: rgb(251, 255, 35);
+    padding:15px 40px;
+    color:rgb(10, 10, 10);
+    border:none;
+    margin-top: 10px;
+    border-radius:25px;
+    transition:0.3s;
+    font-weight: 600;
+}
+  button:hover{
+    background-color:rgb(255, 2, 2);
+    color:rgb(255, 255, 255);
+   
+  }
+  p{
+    max-width:900px;
+  }
+  a{
+    text-decoration: solid;
+  }
+  
+@media screen and (max-width: 811px){
+    ul{
+      margin: 20px 50px;
+    }
+  }
+
+  @media screen and (max-width: 455px){
+    .body-card{
+      background: #333;
+      margin:50px 8px;
+      padding:10px;
+     border-radius:20px;
+  }
+
+  img{
+    height:270px;
+  width: 270px;
+  margin-left: 20px;
+  }
+  button{
+    padding:15px 60px;
+    align-items: center;
+  }
+  }
+  
+  @media screen and (min-width: 690px){
+    ul{
+      margin: 20px 636px;
+    }
+    
+  }

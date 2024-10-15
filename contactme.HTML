@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>contact me </title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="icon" type="image/x-icon" href="/assets/image1_0.jpg">
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+  <header>
+   
+    <ul>
+        <li><a class="mimi"  href="index.html">Home</a></li>
+        <li><a class="mimi"  href="contact me.HTML">CONTACT</a></li>
+    </ul>
+</header>
+  <form id="email-form">      
+    <input name="name"  type="text" id="name" class="feedback-input" placeholder="Name" required />   
+    <input name="email" type="email" id="email"  class="feedback-input" placeholder="Email" required/>
+    <textarea name="text" id="message" class="feedback-input" placeholder="Comment" required></textarea>
+    <input type="submit" value="Send"/>
+  </form>
+</body>
+<style>
+ 
+
+body { background:#333; }
+form { max-width:420px; margin:50px auto; }
+
+
+header{
+    display: flex;
+    align-items: center;
+   
+}
+
+ul{
+    display: flex;
+    margin: 0px 500px ;
+    justify-content: space-around;
+    margin-top:30px;
+}
+li{
+    margin: 0px 20px;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mimi{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+     .mimi:hover{
+        color:rgb(255, 53, 53);
+        font-size: large;
+     }
+     
+  @media screen and (max-width: 690px){
+    ul{
+      margin: 20px 80px;
+    }}
+
+
+.feedback-input {
+  color:white;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #4d4c4c;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  
+  width: 100%;
+  background:#fbff15;
+  border-radius:20px;
+  border:0;
+  cursor:pointer;
+  color:rgb(0, 0, 0);
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover {   background:rgb(255, 86, 73);}
+</style>
+
+
+
+
+<script>
+    // Initialize EmailJS with your user ID
+    (function() {
+        emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+    })();
+
+    document.getElementById('email-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const templateParams = {
+           name: full_name,
+            email: email_id,
+            message: message,
+        };
+
+        emailjs.send('service_1jkksia', 'template_qoer2wq', templateParams)
+            .then(function(response) {
+                alert('Email sent successfully!', response.status, response.text);
+                document.getElementById('email-form').reset(); // Reset form
+            }, function(error) {
+                alert('Failed to send email. Please try again later.', error);
+            });
+    });
+</script>
+
+</script>
+</html>
